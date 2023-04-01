@@ -12,4 +12,5 @@ r = requests.get(url)
 # print(r.text)
 wdic = json.loads(r.text)
 w = wdic["current"]["temp_c"]
-speaker.Speak(f"The current weather of {city} is {w} degree celsius")
+f = wdic["current"]["temp_f"]
+speaker.Speak(f"The current weather of {city} is {w} degree celsius and {f} degree fehrenhite")
